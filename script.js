@@ -5,16 +5,15 @@ const MINUS_BTN = document.getElementById("decrease");
 const OUTPUT = document.getElementById("output");
 
 let nr = 0;
-// OUTPUT.innerHTML = nr;
 
 function incAndDec() {
-    PLUS_BTN.addEventListener("click", () => {
-        nr += 1;
+    PLUS_BTN.onclick = () => {
+        nr++;
         OUTPUT.innerHTML = nr;
-    })
-    MINUS_BTN.addEventListener("click", () => {
-        nr -=1;
+    }
+    MINUS_BTN.onclick = () => {
+        nr--;
         OUTPUT.innerHTML = nr;
-    })
+    }
 }
 incAndDec();
